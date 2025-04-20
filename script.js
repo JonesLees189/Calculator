@@ -4,6 +4,7 @@ const equal = document.querySelector('.equal');
 const clear = document.querySelector('.clear');
 const percent = document.querySelector('.percent');
 const period = document.querySelector('.period');
+const sign = document.querySelector('.sign');
 const display = document.getElementById('numbers');
 const operatorSymbols = ['+', '-', '×', '÷'];
 const numberSymbols = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
@@ -53,6 +54,27 @@ function typePeriod() {
 
 }
 
+function typeSign() {
+    if (display.innerText.length >= 15) return;
+    if (display.innerText[display.innerText.length - 1] === '%') return;
+    if (display.innerText === '0') {
+        display.innerText = '-';
+        return;
+    }
+    //if the last character is a negative sign, remove it
+    if (display.innerText[display.innerText.length - 1] === '-') {
+        display.innerText = display.innerText.slice(0, -1);
+        if (display.innerText === '') {
+            display.innerText = '0';
+        }
+        return;
+    }
+    // if the last character in the display is a operator, add the sign to the end
+    if (operatorSymbols.includes(display.innerText[display.innerText.length - 1])) {
+        display.innerText += '-';
+        return;
+    }
+}
 function clearDisplay() {
     display.innerText = '0';
 }
@@ -68,3 +90,4 @@ operators.forEach(operator => {
 clear.addEventListener('click', clearDisplay);
 percent.addEventListener('click', typePercent);
 period.addEventListener('click', typePeriod);
+sign.addEventListener('click', typeSign);
