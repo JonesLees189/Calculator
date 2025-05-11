@@ -1,45 +1,52 @@
-body{
-    
-    background: #ff4242;
-    background: radial-gradient(circle, rgba(255, 66, 66, 1) 8%, rgba(255, 92, 92, 1) 31%, rgba(251, 146, 60, 1) 84%);
+body {
+
+    background: #154472;
 }
-.card{
-    background: #ff4242;
-background: radial-gradient(circle, rgba(255, 66, 66, 1) 8%, rgba(255, 92, 92, 1) 31%, rgba(251, 146, 60, 1) 84%);
+
+.card {
+    background: #154472;
 }
+
 .btn-main {
     background-color: #F9FAFB;
     color: #111827;
-    border-color: #FB923C;
+    border-color:#050304;
 }
+
 .btn-main:hover {
-    background: radial-gradient(circle, rgba(255, 66, 66, 1) 8%, rgba(255, 92, 92, 1) 31%, rgba(251, 146, 60, 1) 84%);
+    background-color:#2972B6 !important;
     color: #F9FAFB;
     border-color: #000000;
 }
+
 .btn-main:focus {
     box-shadow: 0 0 0 4px rgba(251, 236, 201, 0.5);
-    border-color: #FBBF24;
+    border-color: #050304;
 }
+
 .btn-main:active {
-    background-color: #FBBF24 !important;
+    background-color:#2972B6 !important;
     color: #111827 !important;
     border-color: #FBBF24 !important;
 }
+
 .btn-side {
-    background-color: #FB923C;
+    background-color: #2972B6;
     color: #F9FAFB;
     border-color: #F9FAFB;
 }
+
 .btn-side:hover {
     background-color: #F9FAFB;
     color: #111827;
-    border-color: #FBBF24;
+    border-color: #050304;
 }
+
 .btn-side:focus {
     box-shadow: 0 0 0 4px rgba(251, 236, 201, 0.5);
     border-color: #FBBF24;
 }
+
 .btn-side:active {
     background-color: #FBBF24 !important;
     color: #111827 !important;

@@ -84,13 +84,13 @@ function clearDisplay() {
 }
 
 function calculate() {
-    
+
     if (operatorSymbols.includes(display.innerText[display.innerText.length - 1])) {
         display.innerText = display.innerText.slice(0, -1);
     }
     displayInnerText = display.innerText.replace(/%/g, '/100');
     let result = eval(displayInnerText.replace(/×/g, '*').replace(/÷/g, '/'));
-   
+
     displayResult.innerText = result;
     // remove class d-none from displayEqual
     displayEqual.classList.remove('d-none');
